@@ -6,6 +6,10 @@ import (
 )
 
 
-func TestMapInt(t *testing.T) {
-
+func TestMapString(t *testing.T) {
+  input := []string{"aaa", "bbb", "ccc"}
+  f := func(string) string {
+    return "ddd"
+  }
+  MapString(input, f)
 }
