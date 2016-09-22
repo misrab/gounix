@@ -2,8 +2,24 @@ package functional
 
 
 import (
+  "strings"
 )
 
+
+/*
+  Equal
+*/
+
+func EqualString(x []string, y []string) bool {
+  if len(x) != len(y) { return false }
+  for i := 0; i < len(x); i++ {
+    if strings.Compare(x[i], y[i]) != 0 {
+      return false
+    }
+  }
+
+  return true
+}
 
 /*
   Map
